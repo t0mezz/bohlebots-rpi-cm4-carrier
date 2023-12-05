@@ -456,7 +456,7 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "empty.kicad_wks",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -466,6 +466,19 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "cb2ca3e3-6a85-48fd-bb76-4e5b38c26ae5",
+      ""
+    ],
+    [
+      "7a0e6b7b-c75a-4a1e-9cb8-6e402cc842dc",
+      "main_backupboard_1"
+    ],
+    [
+      "3c3022fe-4d7b-4672-a781-bd596b50cbbc",
+      "main_backupboard_2"
+    ]
+  ],
   "text_variables": {}
 }

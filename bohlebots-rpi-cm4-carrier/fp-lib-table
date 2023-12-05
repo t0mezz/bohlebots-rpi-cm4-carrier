@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "RPi_Compute_Module_4")(type "KiCad")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/RPi_Compute_Module_4.pretty")(options "")(descr ""))
   (lib (name "bohlebots")(type "KiCad")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/reference/bohlebots-lib/bohlebots.pretty")(options "")(descr ""))
+  (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.pretty")(options "")(descr ""))
 )
