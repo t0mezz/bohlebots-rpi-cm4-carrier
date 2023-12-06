@@ -1253,7 +1253,7 @@
     (uuid b70d6b3f-6f1d-4320-ad47-e49881abf53e)
   )
   (text "Ideal diode to prevent reverse\npolarity at the input"
-    (at 96.52 36.83 0)
+    (at 95.25 36.83 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f0309d13-8efe-436d-8475-3c44be07c0fd)
   )
