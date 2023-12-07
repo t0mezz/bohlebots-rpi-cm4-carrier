@@ -1,7 +1,6 @@
 (sym_lib_table
   (version 7)
-  (lib (name "bohlebots.lib")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/bohlebots.lib.kicad_sym")(options "")(descr ""))
-  (lib (name "Raspberry_Pi_Compute_Module_4")(type "Legacy")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4.lib")(options "")(descr ""))
-  (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.kicad_sym")(options "")(descr ""))
-  (lib (name "bohlebots-rpi-cm4-carrier-symbols")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/bohlebots-rpi-cm4-carrier-symbols.kicad_sym")(options "")(descr ""))
+  (lib (name "bohlebots.lib")(type "KiCad")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/bohlebots.lib.kicad_sym")(options "")(descr ""))
+  (lib (name "Raspberry_Pi_Compute_Module_4")(type "Legacy")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4.lib")(options "")(descr ""))
+  (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/virus/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.kicad_sym")(options "")(descr ""))
 )
