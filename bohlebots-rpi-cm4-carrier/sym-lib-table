@@ -4,4 +4,5 @@
   (lib (name "bohlebots-rpi-cm4-carrier-symbols")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/bohlebots-rpi-cm4-carrier-symbols.kicad_sym")(options "")(descr ""))
   (lib (name "Raspberry_Pi_Compute_Module_4")(type "Legacy")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4.lib")(options "")(descr ""))
   (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.kicad_sym")(options "")(descr ""))
+  (lib (name "2023-12-11_21-41-54")(type "KiCad")(uri "C:/Users/acc4t/Downloads/DF40C_100DS_0_4V_51_/KiCADv6/2023-12-11_21-41-54.kicad_sym")(options "")(descr ""))
 )
