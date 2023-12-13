@@ -4,4 +4,7 @@
   (lib (name "RPi_Compute_Module_4")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/RPi_Compute_Module_4.pretty")(options "")(descr ""))
   (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.pretty")(options "")(descr ""))
   (lib (name "footprints")(type "KiCad")(uri "C:/Users/acc4t/Downloads/DF40C_100DS_0_4V_51_/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "USBLC6-2SC6")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/USBLC6-2SC6.pretty")(options "")(descr ""))
+  (lib (name "IP4220CZ6F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/IP4220CZ6F.pretty")(options "")(descr ""))
+  (lib (name "bohlebots-rpi-cm4-carrier")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/bohlebots-rpi-cm4-carrier.pretty")(options "")(descr ""))
 )

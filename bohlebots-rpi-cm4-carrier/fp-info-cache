@@ -1,4 +1,4 @@
-22538421767814220
+22548636174937056
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56104,6 +56104,13 @@ heatsink
 0
 0
 0
+IP4220CZ6F
+SOT95P275X110-6N
+
+
+0
+6
+6
 Inductor_SMD
 L_6.3x6.3_H3
 Choke, SMD, 6.3x6.3mm 3mm height
@@ -91748,6 +91755,27 @@ igbt diode module
 0
 25
 25
+USBLC6-2SC6
+SOT23-6L_STM
+
+USBLC6-2SC6 
+0
+6
+6
+USBLC6-2SC6
+SOT23-6L_STM-L
+
+USBLC6-2SC6 
+0
+6
+6
+USBLC6-2SC6
+SOT23-6L_STM-M
+
+USBLC6-2SC6 
+0
+6
+6
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
@@ -92847,3 +92875,17 @@ logo_klein
 0
 0
 0
+bohlebots-rpi-cm4-carrier
+SOT26
+
+
+0
+6
+6
+footprints
+CONN_DF40C-100DS-0.4V51_HIR
+
+DF40C-100DS-0.4V51 
+0
+100
+100
