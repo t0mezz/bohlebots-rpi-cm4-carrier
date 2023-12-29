@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.6,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 0.7,
+          "width": 0.2
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.19999999999999998
         }
       },
       "diff_pair_dimensions": [
@@ -55,7 +55,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "copper_edge_clearance|113136396|112636396|562262c6-9271-466f-ad69-6a84d768b220|219cf2a8-5e8f-4ffb-bcce-5e44d98635c0",
+        "starved_thermal|120920000|69800000|1c21fb12-d8e9-4ac5-becf-7b8d31aa0d99|fd9e2878-eb75-4af3-98bd-92603186125f|F.Cu",
+        "starved_thermal|120920000|77800000|1c21fb12-d8e9-4ac5-becf-7b8d31aa0d99|37f5db12-e642-4de9-b299-d4882ac7a412|F.Cu",
+        "starved_thermal|124000000|77800000|1c21fb12-d8e9-4ac5-becf-7b8d31aa0d99|d78fdbc5-66ee-422f-a921-79ef7b5d4c7c|F.Cu",
+        "starved_thermal|97590000|120470000|1c21fb12-d8e9-4ac5-becf-7b8d31aa0d99|61fbb7af-50db-4dfd-a9a0-53adeaab05ab|F.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -111,7 +117,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.09,
+        "min_clearance": 0.127,
         "min_connection": 0.09,
         "min_copper_edge_clearance": 0.3,
         "min_hole_clearance": 0.32999999999999996,
@@ -123,9 +129,9 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.09,
-        "min_via_annular_width": 0.13,
-        "min_via_diameter": 0.25,
+        "min_track_width": 0.127,
+        "min_via_annular_width": 0.0,
+        "min_via_diameter": 0.5,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -430,9 +436,77 @@
       {
         "bus_width": 12,
         "clearance": 0.2,
-        "diff_pair_gap": 0.1,
+        "diff_pair_gap": 0.14,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.4894,
+        "diff_pair_width": 0.4477,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Ethernet Data",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power_16V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 2.0,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power_3.3V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.2,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power_5V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.2,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.14,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.714,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -449,7 +523,10 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "Net-(D1-K)": "Power_3.3V",
+      "Net-(J5-GND)": "Power_16V"
+    },
     "netclass_patterns": [
       {
         "netclass": "USB Data",
@@ -458,6 +535,34 @@
       {
         "netclass": "USB Data",
         "pattern": "/USB_P"
+      },
+      {
+        "netclass": "Ethernet Data",
+        "pattern": "/TD_P"
+      },
+      {
+        "netclass": "Ethernet Data",
+        "pattern": "/TD_N"
+      },
+      {
+        "netclass": "Ethernet Data",
+        "pattern": "/RD_P"
+      },
+      {
+        "netclass": "Ethernet Data",
+        "pattern": "/RD_N"
+      },
+      {
+        "netclass": "Power_16V",
+        "pattern": "16V"
+      },
+      {
+        "netclass": "Power_5V",
+        "pattern": "5V"
+      },
+      {
+        "netclass": "Power_3.3V",
+        "pattern": "3.3V"
       }
     ]
   },
