@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\acc4t\Documents\KiCad_Projects\bohlebots-rpi-cm4-carrier\bohlebots-rpi-cm4-carrier\bohlebots-rpi-cm4-carrier.kicad_sch</source>
-    <date>29.12.2023 01:43:37</date>
+    <date>29.12.2023 23:50:10</date>
     <tool>Eeschema 7.0.9</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Compute Module 4 Carrier - Bohlebots BigBrother</title>
         <company/>
-        <rev>v01</rev>
+        <rev>v01.1</rev>
         <date>2023-12-10</date>
         <source>bohlebots-rpi-cm4-carrier.kicad_sch</source>
         <comment number="1" value=""/>
@@ -316,11 +316,7 @@
       <value>Compute_Module_4_Connectors</value>
       <footprint>RPi_Compute_Module_4:Raspberry-Pi-4-Compute-Module</footprint>
       <datasheet>https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf</datasheet>
-      <fields>
-        <field name="LCSC">C424649</field>
-      </fields>
       <libsource lib="Raspberry_Pi_Compute_Module_4" part="Compute_Module_4_Connectors" description=""/>
-      <property name="LCSC" value="C424649"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="bohlebots-rpi-cm4-carrier.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -418,6 +414,34 @@
       <property name="ki_keywords" value="ESD protection USB 3.0"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1e1b3226-a8bf-4df0-bb4d-16fdbd8456e9</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>DT1446-04SO-7</value>
+      <footprint>bohlebots-rpi-cm4-carrier:SOT26</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/DT1446-04SO.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2335455</field>
+        <field name="Field6">CDDFN10-3324P-13</field>
+        <field name="Field7">Bourns</field>
+        <field name="Field8">UDIO00346</field>
+        <field name="Hersteller">Diodes Incorporated</field>
+        <field name="Part Description">Quad TVS diode for high speed signals (USB3, GigE etc.)</field>
+      </fields>
+      <libsource lib="CM4IO" part="TPD4EUSB30" description="4-Channel ESD Protection for Super-Speed USB 3.0 Interface, USON-10"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2335455"/>
+      <property name="Field6" value="CDDFN10-3324P-13"/>
+      <property name="Field7" value="Bourns"/>
+      <property name="Field8" value="UDIO00346"/>
+      <property name="Part Description" value="Quad TVS diode for high speed signals (USB3, GigE etc.)"/>
+      <property name="Hersteller" value="Diodes Incorporated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="bohlebots-rpi-cm4-carrier.kicad_sch"/>
+      <property name="ki_description" value="4-Channel ESD Protection for Super-Speed USB 3.0 Interface, USON-10"/>
+      <property name="ki_keywords" value="ESD protection USB 3.0"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4fe936a-95a8-46dc-be8a-ffdea946ba78</tstamps>
     </comp>
     <comp ref="X1">
       <value>Miromatch</value>
@@ -1122,6 +1146,8 @@
       <node ref="T2" pin="3" pinfunction="Clock" pintype="input"/>
       <node ref="T2" pin="6" pintype="input"/>
       <node ref="U1" pin="56" pinfunction="GPIO3" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="D2-" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="D2+" pintype="passive"/>
       <node ref="X1" pin="3" pinfunction="SCL" pintype="bidirectional"/>
     </net>
     <net code="15" name="/SDA">
@@ -1132,6 +1158,8 @@
       <node ref="T2" pin="2" pinfunction="Data" pintype="input"/>
       <node ref="T2" pin="7" pintype="input"/>
       <node ref="U1" pin="58" pinfunction="GPIO2" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="D1-" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="D1+" pintype="passive"/>
       <node ref="X1" pin="2" pinfunction="SDA" pintype="bidirectional"/>
     </net>
     <net code="16" name="/SPI0_CE0">
@@ -1205,6 +1233,7 @@
       <node ref="T1" pin="8" pintype="power_in"/>
       <node ref="T2" pin="1" pinfunction="V+" pintype="power_in"/>
       <node ref="T2" pin="8" pintype="power_in"/>
+      <node ref="U6" pin="5" pinfunction="VCC" pintype="passive"/>
       <node ref="X1" pin="1" pinfunction="V+" pintype="unspecified"/>
     </net>
     <net code="30" name="5V">
@@ -1325,6 +1354,7 @@
       <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U4" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U5" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="X1" pin="4" pinfunction="GND" pintype="unspecified"/>
     </net>
     <net code="33" name="Net-(D1-K)">
