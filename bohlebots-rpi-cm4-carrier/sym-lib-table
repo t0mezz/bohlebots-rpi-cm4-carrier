@@ -6,4 +6,6 @@
   (lib (name "SI_46001_F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.kicad_sym")(options "")(descr ""))
   (lib (name "USBLC6-2SC6")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/USBLC6-2SC6.kicad_sym")(options "")(descr ""))
   (lib (name "IP4220CZ6F")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/IP4220CZ6F.kicad_sym")(options "")(descr ""))
+  (lib (name "Raspberry_Pi_Compute_Module_4_BigBrother")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4_BigBrother.kicad_sym")(options "")(descr ""))
+  (lib (name "qr_code_ttude_github_org")(type "KiCad")(uri "C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/qr_code_ttude_github_org.kicad_sym")(options "")(descr ""))
 )

@@ -1,4 +1,4 @@
-22552051433570038
+22558877597011921
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -83216,7 +83216,21 @@ WiFi IEEE802.11 b/g/n
 44
 44
 RPi_Compute_Module_4
+Hirose-DF40C-100DS-0.4V(51)
+Raspberry Pi 4 Compute Module
+Raspberry Pi 4 Compute Module
+0
+100
+100
+RPi_Compute_Module_4
 Raspberry-Pi-4-Compute-Module
+Raspberry Pi 4 Compute Module
+Raspberry Pi 4 Compute Module
+0
+0
+0
+RPi_Compute_Module_4
+Raspberry-Pi-4-Compute-Module_FULL
 Raspberry Pi 4 Compute Module
 Raspberry Pi 4 Compute Module
 0
@@ -92896,6 +92910,20 @@ SOT26
 0
 6
 6
+bohlebots-rpi-cm4-carrier
+qr_code_bigbrother_org
+
+
+0
+0
+0
+bohlebots-rpi-cm4-carrier
+qr_code_bigbrother_org_small
+
+
+0
+0
+0
 footprints
 CONN_DF40C-100DS-0.4V51_HIR
 
