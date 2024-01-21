@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\acc4t\Documents\KiCad_Projects\bohlebots-rpi-cm4-carrier\bohlebots-rpi-cm4-carrier\bohlebots-rpi-cm4-carrier.kicad_sch</source>
-    <date>29.12.2023 23:50:10</date>
+    <date>19.01.2024 19:41:27</date>
     <tool>Eeschema 7.0.9</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Compute Module 4 Carrier - Bohlebots BigBrother</title>
         <company/>
-        <rev>v01.1</rev>
+        <rev>v01.2</rev>
         <date>2023-12-10</date>
         <source>bohlebots-rpi-cm4-carrier.kicad_sch</source>
         <comment number="1" value=""/>
@@ -312,16 +312,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>049d13aa-deb5-4d59-8cab-0d0d7885b628</tstamps>
     </comp>
-    <comp ref="U1">
-      <value>Compute_Module_4_Connectors</value>
-      <footprint>RPi_Compute_Module_4:Raspberry-Pi-4-Compute-Module</footprint>
-      <datasheet>https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf</datasheet>
-      <libsource lib="Raspberry_Pi_Compute_Module_4" part="Compute_Module_4_Connectors" description=""/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="bohlebots-rpi-cm4-carrier.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>ddda47c3-e904-4e79-adbb-e097aca041b5 ac152893-8eef-415f-9db0-54e8971fc112</tstamps>
-    </comp>
     <comp ref="U2">
       <value>USB_Conn_01x05_Pin</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
@@ -442,6 +432,26 @@
       <property name="ki_keywords" value="ESD protection USB 3.0"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f4fe936a-95a8-46dc-be8a-ffdea946ba78</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>Compute_Module_4_Connector_A</value>
+      <footprint>RPi_Compute_Module_4:Hirose-DF40C-100DS-0.4V(51)</footprint>
+      <datasheet>https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</datasheet>
+      <libsource lib="Raspberry_Pi_Compute_Module_4_BigBrother" part="Compute_Module_4_Connector_A" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="bohlebots-rpi-cm4-carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4392a860-16b1-48c2-bac2-005fd56e41b1</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>Compute_Module_4_Connector_B</value>
+      <footprint>RPi_Compute_Module_4:Hirose-DF40C-100DS-0.4V(51)</footprint>
+      <datasheet>https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</datasheet>
+      <libsource lib="Raspberry_Pi_Compute_Module_4_BigBrother" part="Compute_Module_4_Connector_B" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="bohlebots-rpi-cm4-carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>985afe49-e704-4f69-b891-af74cb6c6197</tstamps>
     </comp>
     <comp ref="X1">
       <value>Miromatch</value>
@@ -699,13 +709,13 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Raspberry_Pi_Compute_Module_4" part="Compute_Module_4_Connectors">
-      <docs>https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf</docs>
+    <libpart lib="Raspberry_Pi_Compute_Module_4_BigBrother" part="Compute_Module_4_Connector_A">
+      <docs>https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</docs>
       <fields>
-        <field name="Reference">U1</field>
-        <field name="Value">Compute_Module_4_Connectors</field>
-        <field name="Footprint">RPi_Compute_Module_4:Raspberry-Pi-4-Compute-Module</field>
-        <field name="Datasheet">https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf</field>
+        <field name="Reference">U</field>
+        <field name="Value">Compute_Module_4_Connector_A</field>
+        <field name="Footprint">RPi_Compute_Module_4:Hirose-DF40C-100DS-0.4V(51)</field>
+        <field name="Datasheet">https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</field>
       </fields>
       <pins>
         <pin num="1" name="GND" type="power_in"/>
@@ -808,106 +818,117 @@
         <pin num="98" name="GND" type="power_in"/>
         <pin num="99" name="GLOBAL_EN" type="input"/>
         <pin num="100" name="~{nEXTRST}" type="output"/>
-        <pin num="101" name="USB_OTG_ID" type="input"/>
-        <pin num="102" name="~{PCIe_CLK_nREQ}" type="input"/>
-        <pin num="103" name="USB_N" type="passive"/>
-        <pin num="104" name="Reserved" type="no_connect"/>
-        <pin num="105" name="USB_P" type="passive"/>
-        <pin num="106" name="Reserved" type="no_connect"/>
-        <pin num="107" name="GND" type="power_in"/>
-        <pin num="108" name="GND" type="power_in"/>
-        <pin num="109" name="~{PCIe_nRST}" type="output"/>
-        <pin num="110" name="PCIe_CLK_P" type="output"/>
-        <pin num="111" name="VDAC_COMP" type="output"/>
-        <pin num="112" name="PCIe_CLK_N" type="output"/>
-        <pin num="113" name="GND" type="power_in"/>
-        <pin num="114" name="GND" type="power_in"/>
-        <pin num="115" name="CAM1_D0_N" type="input"/>
-        <pin num="116" name="PCIe_RX_P" type="input"/>
-        <pin num="117" name="CAM1_D0_P" type="input"/>
-        <pin num="118" name="PCIe_RX_N" type="input"/>
-        <pin num="119" name="GND" type="power_in"/>
-        <pin num="120" name="GND" type="power_in"/>
-        <pin num="121" name="CAM1_D1_N" type="input"/>
-        <pin num="122" name="PCIe_TX_P" type="output"/>
-        <pin num="123" name="CAM1_D1_P" type="input"/>
-        <pin num="124" name="PCIe_TX_N" type="output"/>
-        <pin num="125" name="GND" type="power_in"/>
-        <pin num="126" name="GND" type="power_in"/>
-        <pin num="127" name="CAM1_C_N" type="input"/>
-        <pin num="128" name="CAM0_D0_N" type="input"/>
-        <pin num="129" name="CAM1_C_P" type="input"/>
-        <pin num="130" name="CAM0_D0_P" type="input"/>
-        <pin num="131" name="GND" type="power_in"/>
-        <pin num="132" name="GND" type="power_in"/>
-        <pin num="133" name="CAM1_D2_N" type="input"/>
-        <pin num="134" name="CAM0_D1_N" type="input"/>
-        <pin num="135" name="CAM1_D2_P" type="input"/>
-        <pin num="136" name="CAM0_D1_P" type="input"/>
-        <pin num="137" name="GND" type="power_in"/>
-        <pin num="138" name="GND" type="power_in"/>
-        <pin num="139" name="CAM1_D3_N" type="input"/>
-        <pin num="140" name="CAM0_C_N" type="input"/>
-        <pin num="141" name="CAM1_D3_P" type="input"/>
-        <pin num="142" name="CAM0_C_P" type="input"/>
-        <pin num="143" name="HDMI1_HOTPLUG" type="input"/>
-        <pin num="144" name="GND" type="power_in"/>
-        <pin num="145" name="HDMI1_SDA" type="bidirectional"/>
-        <pin num="146" name="HDMI1_TX2_P" type="output"/>
-        <pin num="147" name="HDMI1_SCL" type="open_collector"/>
-        <pin num="148" name="HDMI1_TX2_N" type="output"/>
-        <pin num="149" name="HDMI1_CEC" type="open_collector"/>
-        <pin num="150" name="GND" type="power_in"/>
-        <pin num="151" name="HDMI0_CEC" type="open_collector"/>
-        <pin num="152" name="HDMI1_TX1_P" type="output"/>
-        <pin num="153" name="HDMI0_HOTPLUG" type="input"/>
-        <pin num="154" name="HDMI1_TX1_N" type="output"/>
-        <pin num="155" name="GND" type="power_in"/>
-        <pin num="156" name="GND" type="power_in"/>
-        <pin num="157" name="DSI0_D0_N" type="output"/>
-        <pin num="158" name="HDMI1_TX0_P" type="output"/>
-        <pin num="159" name="DSI0_D0_P" type="output"/>
-        <pin num="160" name="HDMI1_TX0_N" type="output"/>
-        <pin num="161" name="GND" type="power_in"/>
-        <pin num="162" name="GND" type="power_in"/>
-        <pin num="163" name="DSI0_D1_N" type="output"/>
-        <pin num="164" name="HDMI1_CLK_P" type="output"/>
-        <pin num="165" name="DSI0_D1_P" type="output"/>
-        <pin num="166" name="HDMI1_CLK_N" type="output"/>
-        <pin num="167" name="GND" type="power_in"/>
-        <pin num="168" name="GND" type="power_in"/>
-        <pin num="169" name="DSI0_C_N" type="output"/>
-        <pin num="170" name="HDMI0_TX2_P" type="output"/>
-        <pin num="171" name="DSI0_C_P" type="output"/>
-        <pin num="172" name="HDMI0_TX2_N" type="output"/>
-        <pin num="173" name="GND" type="power_in"/>
-        <pin num="174" name="GND" type="power_in"/>
-        <pin num="175" name="DSI1_D0_N" type="output"/>
-        <pin num="176" name="HDMI0_TX1_P" type="output"/>
-        <pin num="177" name="DSI1_D0_P" type="output"/>
-        <pin num="178" name="HDMI0_TX1_N" type="output"/>
-        <pin num="179" name="GND" type="power_in"/>
-        <pin num="180" name="GND" type="power_in"/>
-        <pin num="181" name="DSI1_D1_N" type="output"/>
-        <pin num="182" name="HDMI0_TX0_P" type="output"/>
-        <pin num="183" name="DSI1_D1_P" type="output"/>
-        <pin num="184" name="HDMI0_TX0_N" type="output"/>
-        <pin num="185" name="GND" type="power_in"/>
-        <pin num="186" name="GND" type="power_in"/>
-        <pin num="187" name="DSI1_C_N" type="output"/>
-        <pin num="188" name="HDMI0_CLK_P" type="output"/>
-        <pin num="189" name="DSI1_C_P" type="output"/>
-        <pin num="190" name="HDMI0_CLK_N" type="output"/>
-        <pin num="191" name="GND" type="power_in"/>
-        <pin num="192" name="GND" type="power_in"/>
-        <pin num="193" name="DSI1_D2_N" type="output"/>
-        <pin num="194" name="DSI1_D3_N" type="output"/>
-        <pin num="195" name="DSI1_D2_P" type="output"/>
-        <pin num="196" name="DSI1_D3_P" type="output"/>
-        <pin num="197" name="GND" type="power_in"/>
-        <pin num="198" name="GND" type="power_in"/>
-        <pin num="199" name="HDMI0_SDA" type="bidirectional"/>
-        <pin num="200" name="HDMI0_SCL" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="Raspberry_Pi_Compute_Module_4_BigBrother" part="Compute_Module_4_Connector_B">
+      <docs>https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Compute_Module_4_Connector_B</field>
+        <field name="Footprint">RPi_Compute_Module_4:Hirose-DF40C-100DS-0.4V(51)</field>
+        <field name="Datasheet">https://www.mouser.de/datasheet/2/185/DF40_Catalog_D31649_en-2301840.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="USB_OTG_ID" type="input"/>
+        <pin num="2" name="~{PCIe_CLK_nREQ}" type="input"/>
+        <pin num="3" name="USB_N" type="passive"/>
+        <pin num="4" name="Reserved" type="no_connect"/>
+        <pin num="5" name="USB_P" type="passive"/>
+        <pin num="6" name="Reserved" type="no_connect"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="~{PCIe_nRST}" type="output"/>
+        <pin num="10" name="PCIe_CLK_P" type="output"/>
+        <pin num="11" name="VDAC_COMP" type="output"/>
+        <pin num="12" name="PCIe_CLK_N" type="output"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="CAM1_D0_N" type="input"/>
+        <pin num="16" name="PCIe_RX_P" type="input"/>
+        <pin num="17" name="CAM1_D0_P" type="input"/>
+        <pin num="18" name="PCIe_RX_N" type="input"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="CAM1_D1_N" type="input"/>
+        <pin num="22" name="PCIe_TX_P" type="output"/>
+        <pin num="23" name="CAM1_D1_P" type="input"/>
+        <pin num="24" name="PCIe_TX_N" type="output"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="GND" type="power_in"/>
+        <pin num="27" name="CAM1_C_N" type="input"/>
+        <pin num="28" name="CAM0_D0_N" type="input"/>
+        <pin num="29" name="CAM1_C_P" type="input"/>
+        <pin num="30" name="CAM0_D0_P" type="input"/>
+        <pin num="31" name="GND" type="power_in"/>
+        <pin num="32" name="GND" type="power_in"/>
+        <pin num="33" name="CAM1_D2_N" type="input"/>
+        <pin num="34" name="CAM0_D1_N" type="input"/>
+        <pin num="35" name="CAM1_D2_P" type="input"/>
+        <pin num="36" name="CAM0_D1_P" type="input"/>
+        <pin num="37" name="GND" type="power_in"/>
+        <pin num="38" name="GND" type="power_in"/>
+        <pin num="39" name="CAM1_D3_N" type="input"/>
+        <pin num="40" name="CAM0_C_N" type="input"/>
+        <pin num="41" name="CAM1_D3_P" type="input"/>
+        <pin num="42" name="CAM0_C_P" type="input"/>
+        <pin num="43" name="HDMI1_HOTPLUG" type="input"/>
+        <pin num="44" name="GND" type="power_in"/>
+        <pin num="45" name="HDMI1_SDA" type="bidirectional"/>
+        <pin num="46" name="HDMI1_TX2_P" type="output"/>
+        <pin num="47" name="HDMI1_SCL" type="open_collector"/>
+        <pin num="48" name="HDMI1_TX2_N" type="output"/>
+        <pin num="49" name="HDMI1_CEC" type="open_collector"/>
+        <pin num="50" name="GND" type="power_in"/>
+        <pin num="51" name="HDMI0_CEC" type="open_collector"/>
+        <pin num="52" name="HDMI1_TX1_P" type="output"/>
+        <pin num="53" name="HDMI0_HOTPLUG" type="input"/>
+        <pin num="54" name="HDMI1_TX1_N" type="output"/>
+        <pin num="55" name="GND" type="power_in"/>
+        <pin num="56" name="GND" type="power_in"/>
+        <pin num="57" name="DSI0_D0_N" type="output"/>
+        <pin num="58" name="HDMI1_TX0_P" type="output"/>
+        <pin num="59" name="DSI0_D0_P" type="output"/>
+        <pin num="60" name="HDMI1_TX0_N" type="output"/>
+        <pin num="61" name="GND" type="power_in"/>
+        <pin num="62" name="GND" type="power_in"/>
+        <pin num="63" name="DSI0_D1_N" type="output"/>
+        <pin num="64" name="HDMI1_CLK_P" type="output"/>
+        <pin num="65" name="DSI0_D1_P" type="output"/>
+        <pin num="66" name="HDMI1_CLK_N" type="output"/>
+        <pin num="67" name="GND" type="power_in"/>
+        <pin num="68" name="GND" type="power_in"/>
+        <pin num="69" name="DSI0_C_N" type="output"/>
+        <pin num="70" name="HDMI0_TX2_P" type="output"/>
+        <pin num="71" name="DSI0_C_P" type="output"/>
+        <pin num="72" name="HDMI0_TX2_N" type="output"/>
+        <pin num="73" name="GND" type="power_in"/>
+        <pin num="74" name="GND" type="power_in"/>
+        <pin num="75" name="DSI1_D0_N" type="output"/>
+        <pin num="76" name="HDMI0_TX1_P" type="output"/>
+        <pin num="77" name="DSI1_D0_P" type="output"/>
+        <pin num="78" name="HDMI0_TX1_N" type="output"/>
+        <pin num="79" name="GND" type="power_in"/>
+        <pin num="80" name="GND" type="power_in"/>
+        <pin num="81" name="DSI1_D1_N" type="output"/>
+        <pin num="82" name="HDMI0_TX0_P" type="output"/>
+        <pin num="83" name="DSI1_D1_P" type="output"/>
+        <pin num="84" name="HDMI0_TX0_N" type="output"/>
+        <pin num="85" name="GND" type="power_in"/>
+        <pin num="86" name="GND" type="power_in"/>
+        <pin num="87" name="DSI1_C_N" type="output"/>
+        <pin num="88" name="HDMI0_CLK_P" type="output"/>
+        <pin num="89" name="DSI1_C_P" type="output"/>
+        <pin num="90" name="HDMI0_CLK_N" type="output"/>
+        <pin num="91" name="GND" type="power_in"/>
+        <pin num="92" name="GND" type="power_in"/>
+        <pin num="93" name="DSI1_D2_N" type="output"/>
+        <pin num="94" name="DSI1_D3_N" type="output"/>
+        <pin num="95" name="DSI1_D2_P" type="output"/>
+        <pin num="96" name="DSI1_D3_P" type="output"/>
+        <pin num="97" name="GND" type="power_in"/>
+        <pin num="98" name="GND" type="power_in"/>
+        <pin num="99" name="HDMI0_SDA" type="bidirectional"/>
+        <pin num="100" name="HDMI0_SCL" type="open_collector"/>
       </pins>
     </libpart>
     <libpart lib="SI_46001_F" part="SI-46001-F">
@@ -1064,8 +1085,8 @@
     <library logical="Device">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
-    <library logical="Raspberry_Pi_Compute_Module_4">
-      <uri>C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4.lib</uri>
+    <library logical="Raspberry_Pi_Compute_Module_4_BigBrother">
+      <uri>C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/Raspberry_Pi_Compute_Module_4_BigBrother.kicad_sym</uri>
     </library>
     <library logical="SI_46001_F">
       <uri>C:/Users/acc4t/Documents/KiCad_Projects/bohlebots-rpi-cm4-carrier/libraries/SI_46001_F.kicad_sym</uri>
@@ -1080,63 +1101,63 @@
   <nets>
     <net code="1" name="/DIR1">
       <node ref="ESCON1" pin="P15" pinfunction="D3" pintype="bidirectional"/>
-      <node ref="U1" pin="25" pinfunction="GPIO21" pintype="passive"/>
+      <node ref="U7" pin="25" pinfunction="GPIO21" pintype="passive"/>
     </net>
     <net code="2" name="/DIR2">
       <node ref="ESCON2" pin="P15" pinfunction="D3" pintype="bidirectional"/>
-      <node ref="U1" pin="27" pinfunction="GPIO20" pintype="passive"/>
+      <node ref="U7" pin="27" pinfunction="GPIO20" pintype="passive"/>
     </net>
     <net code="3" name="/DIR3">
       <node ref="ESCON3" pin="P15" pinfunction="D3" pintype="bidirectional"/>
-      <node ref="U1" pin="29" pinfunction="GPIO16" pintype="passive"/>
+      <node ref="U7" pin="29" pinfunction="GPIO16" pintype="passive"/>
     </net>
     <net code="4" name="/DIR4">
       <node ref="ESCON4" pin="P15" pinfunction="D3" pintype="bidirectional"/>
-      <node ref="U1" pin="31" pinfunction="GPIO12" pintype="passive"/>
+      <node ref="U7" pin="31" pinfunction="GPIO12" pintype="passive"/>
     </net>
     <net code="5" name="/ENA">
       <node ref="ESCON1" pin="P16" pinfunction="D2" pintype="bidirectional"/>
       <node ref="ESCON2" pin="P16" pinfunction="D2" pintype="bidirectional"/>
       <node ref="ESCON3" pin="P16" pinfunction="D2" pintype="bidirectional"/>
       <node ref="ESCON4" pin="P16" pinfunction="D2" pintype="bidirectional"/>
-      <node ref="U1" pin="34" pinfunction="GPIO5" pintype="passive"/>
+      <node ref="U7" pin="34" pinfunction="GPIO5" pintype="passive"/>
     </net>
     <net code="6" name="/KICK">
       <node ref="K1" pin="SIG" pinfunction="SIG" pintype="bidirectional"/>
       <node ref="R1" pin="1" pintype="passive"/>
-      <node ref="U1" pin="54" pinfunction="GPIO4" pintype="passive"/>
+      <node ref="U7" pin="54" pinfunction="GPIO4" pintype="passive"/>
     </net>
     <net code="7" name="/LED_nACT">
       <node ref="R4" pin="2" pintype="passive"/>
-      <node ref="U1" pin="21" pinfunction="~{Pi_nLED_Activity}" pintype="open_collector"/>
+      <node ref="U7" pin="21" pinfunction="~{Pi_nLED_Activity}" pintype="open_collector"/>
     </net>
     <net code="8" name="/PWM1">
       <node ref="ESCON1" pin="P17" pinfunction="D1" pintype="bidirectional"/>
-      <node ref="U1" pin="24" pinfunction="GPIO26" pintype="passive"/>
+      <node ref="U7" pin="24" pinfunction="GPIO26" pintype="passive"/>
     </net>
     <net code="9" name="/PWM2">
       <node ref="ESCON2" pin="P17" pinfunction="D1" pintype="bidirectional"/>
-      <node ref="U1" pin="26" pinfunction="GPIO19" pintype="passive"/>
+      <node ref="U7" pin="26" pinfunction="GPIO19" pintype="passive"/>
     </net>
     <net code="10" name="/PWM3">
       <node ref="ESCON3" pin="P17" pinfunction="D1" pintype="bidirectional"/>
-      <node ref="U1" pin="28" pinfunction="GPIO13" pintype="passive"/>
+      <node ref="U7" pin="28" pinfunction="GPIO13" pintype="passive"/>
     </net>
     <net code="11" name="/PWM4">
       <node ref="ESCON4" pin="P17" pinfunction="D1" pintype="bidirectional"/>
-      <node ref="U1" pin="30" pinfunction="GPIO6" pintype="passive"/>
+      <node ref="U7" pin="30" pinfunction="GPIO6" pintype="passive"/>
     </net>
     <net code="12" name="/RD_N">
       <node ref="J1" pin="6" pinfunction="RD-" pintype="passive"/>
-      <node ref="U1" pin="6" pinfunction="Ethernet_Pair1_N" pintype="passive"/>
       <node ref="U4" pin="3" pinfunction="D2-" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="D2+" pintype="passive"/>
+      <node ref="U7" pin="6" pinfunction="Ethernet_Pair1_N" pintype="passive"/>
     </net>
     <net code="13" name="/RD_P">
       <node ref="J1" pin="4" pinfunction="RD+" pintype="passive"/>
-      <node ref="U1" pin="4" pinfunction="Ethernet_Pair1_P" pintype="passive"/>
       <node ref="U4" pin="1" pinfunction="D1-" pintype="passive"/>
       <node ref="U4" pin="6" pinfunction="D1+" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="Ethernet_Pair1_P" pintype="passive"/>
     </net>
     <net code="14" name="/SCL">
       <node ref="J4" pin="3" pinfunction="SCL" pintype="passive"/>
@@ -1145,9 +1166,9 @@
       <node ref="T1" pin="6" pintype="input"/>
       <node ref="T2" pin="3" pinfunction="Clock" pintype="input"/>
       <node ref="T2" pin="6" pintype="input"/>
-      <node ref="U1" pin="56" pinfunction="GPIO3" pintype="passive"/>
       <node ref="U6" pin="3" pinfunction="D2-" pintype="passive"/>
       <node ref="U6" pin="4" pinfunction="D2+" pintype="passive"/>
+      <node ref="U7" pin="56" pinfunction="GPIO3" pintype="passive"/>
       <node ref="X1" pin="3" pinfunction="SCL" pintype="bidirectional"/>
     </net>
     <net code="15" name="/SDA">
@@ -1157,70 +1178,70 @@
       <node ref="T1" pin="7" pintype="input"/>
       <node ref="T2" pin="2" pinfunction="Data" pintype="input"/>
       <node ref="T2" pin="7" pintype="input"/>
-      <node ref="U1" pin="58" pinfunction="GPIO2" pintype="passive"/>
       <node ref="U6" pin="1" pinfunction="D1-" pintype="passive"/>
       <node ref="U6" pin="6" pinfunction="D1+" pintype="passive"/>
+      <node ref="U7" pin="58" pinfunction="GPIO2" pintype="passive"/>
       <node ref="X1" pin="2" pinfunction="SDA" pintype="bidirectional"/>
     </net>
     <net code="16" name="/SPI0_CE0">
       <node ref="J3" pin="8" pinfunction="SPI_CE0" pintype="passive"/>
-      <node ref="U1" pin="39" pinfunction="GPIO8" pintype="passive"/>
+      <node ref="U7" pin="39" pinfunction="GPIO8" pintype="passive"/>
     </net>
     <net code="17" name="/SPI0_CE1">
       <node ref="J3" pin="10" pinfunction="SPI_CE1" pintype="passive"/>
-      <node ref="U1" pin="37" pinfunction="GPIO7" pintype="passive"/>
+      <node ref="U7" pin="37" pinfunction="GPIO7" pintype="passive"/>
     </net>
     <net code="18" name="/SPI0_MISO">
       <node ref="J3" pin="6" pinfunction="SPI_MISO" pintype="passive"/>
-      <node ref="U1" pin="40" pinfunction="GPIO9" pintype="passive"/>
+      <node ref="U7" pin="40" pinfunction="GPIO9" pintype="passive"/>
     </net>
     <net code="19" name="/SPI0_MOSI">
       <node ref="J3" pin="4" pinfunction="SPI_MOSI" pintype="passive"/>
-      <node ref="U1" pin="44" pinfunction="GPIO10" pintype="passive"/>
+      <node ref="U7" pin="44" pinfunction="GPIO10" pintype="passive"/>
     </net>
     <net code="20" name="/SPI0_SCLK">
       <node ref="J3" pin="2" pinfunction="SPI_CLK" pintype="passive"/>
-      <node ref="U1" pin="38" pinfunction="GPIO11" pintype="passive"/>
+      <node ref="U7" pin="38" pinfunction="GPIO11" pintype="passive"/>
     </net>
     <net code="21" name="/TD_N">
       <node ref="J1" pin="3" pinfunction="TD-" pintype="passive"/>
-      <node ref="U1" pin="10" pinfunction="Ethernet_Pair0_N" pintype="passive"/>
       <node ref="U3" pin="3" pinfunction="D2-" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="D2+" pintype="passive"/>
+      <node ref="U7" pin="10" pinfunction="Ethernet_Pair0_N" pintype="passive"/>
     </net>
     <net code="22" name="/TD_P">
       <node ref="J1" pin="1" pinfunction="TD+" pintype="passive"/>
-      <node ref="U1" pin="12" pinfunction="Ethernet_Pair0_P" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="D1-" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="D1+" pintype="passive"/>
+      <node ref="U7" pin="12" pinfunction="Ethernet_Pair0_P" pintype="passive"/>
     </net>
     <net code="23" name="/UART0_RXD">
       <node ref="J3" pin="7" pinfunction="UART_RXD" pintype="passive"/>
-      <node ref="U1" pin="51" pinfunction="GPIO15" pintype="passive"/>
+      <node ref="U7" pin="51" pinfunction="GPIO15" pintype="passive"/>
     </net>
     <net code="24" name="/UART0_TXD">
       <node ref="J3" pin="5" pinfunction="UART_TXD" pintype="passive"/>
-      <node ref="U1" pin="55" pinfunction="GPIO14" pintype="passive"/>
+      <node ref="U7" pin="55" pinfunction="GPIO14" pintype="passive"/>
     </net>
     <net code="25" name="/USB_N">
-      <node ref="U1" pin="103" pinfunction="USB_N" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="D-" pintype="passive"/>
       <node ref="U5" pin="3" pinfunction="D2-" pintype="passive"/>
       <node ref="U5" pin="4" pinfunction="D2+" pintype="passive"/>
+      <node ref="U8" pin="3" pinfunction="USB_N" pintype="passive"/>
     </net>
     <net code="26" name="/USB_OTG_ID">
       <node ref="J3" pin="9" pinfunction="USB_OTG_ID" pintype="passive"/>
-      <node ref="U1" pin="101" pinfunction="USB_OTG_ID" pintype="input"/>
+      <node ref="U8" pin="1" pinfunction="USB_OTG_ID" pintype="input"/>
     </net>
     <net code="27" name="/USB_P">
-      <node ref="U1" pin="105" pinfunction="USB_P" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="D+" pintype="passive"/>
       <node ref="U5" pin="1" pinfunction="D1-" pintype="passive"/>
       <node ref="U5" pin="6" pinfunction="D1+" pintype="passive"/>
+      <node ref="U8" pin="5" pinfunction="USB_P" pintype="passive"/>
     </net>
     <net code="28" name="/nRPIBOOT">
       <node ref="J3" pin="12" pinfunction="nBoot" pintype="passive"/>
-      <node ref="U1" pin="93" pinfunction="~{nRPIBOOT}" pintype="input"/>
+      <node ref="U7" pin="93" pinfunction="~{nRPIBOOT}" pintype="input"/>
     </net>
     <net code="29" name="3.3V">
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
@@ -1239,14 +1260,14 @@
     <net code="30" name="5V">
       <node ref="D36V28FX1" pin="6" pinfunction="OUT" pintype="output"/>
       <node ref="J3" pin="1" pinfunction="5V" pintype="passive"/>
-      <node ref="U1" pin="77" pinfunction="+5V" pintype="power_in"/>
-      <node ref="U1" pin="79" pinfunction="+5V" pintype="power_in"/>
-      <node ref="U1" pin="81" pinfunction="+5V" pintype="power_in"/>
-      <node ref="U1" pin="83" pinfunction="+5V" pintype="power_in"/>
-      <node ref="U1" pin="85" pinfunction="+5V" pintype="power_in"/>
-      <node ref="U1" pin="87" pinfunction="+5V" pintype="power_in"/>
       <node ref="U2" pin="1" pinfunction="V+" pintype="passive"/>
       <node ref="U5" pin="5" pinfunction="VCC" pintype="passive"/>
+      <node ref="U7" pin="77" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="79" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="81" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="83" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="85" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="87" pinfunction="+5V" pintype="power_in"/>
     </net>
     <net code="31" name="16V">
       <node ref="C2" pin="1" pintype="passive"/>
@@ -1299,62 +1320,62 @@
       <node ref="T1" pin="5" pintype="power_in"/>
       <node ref="T2" pin="4" pinfunction="GND" pintype="power_in"/>
       <node ref="T2" pin="5" pintype="power_in"/>
-      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="107" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="108" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="113" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="114" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="119" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="120" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="125" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="126" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="13" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="131" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="132" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="137" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="138" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="14" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="144" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="150" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="155" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="156" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="161" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="162" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="167" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="168" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="173" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="174" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="179" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="180" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="185" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="186" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="191" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="192" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="197" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="198" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="22" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="23" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="32" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="33" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="42" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="43" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="52" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="53" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="59" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="60" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="65" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="66" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="7" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="71" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="74" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="8" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="98" pinfunction="GND" pintype="power_in"/>
       <node ref="U2" pin="4" pinfunction="GND" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U4" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U5" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U6" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="22" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="23" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="32" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="42" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="43" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="52" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="53" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="59" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="60" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="65" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="66" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="71" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="74" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="98" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="20" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="25" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="26" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="31" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="32" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="37" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="38" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="44" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="50" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="55" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="56" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="61" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="62" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="67" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="68" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="73" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="74" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="79" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="80" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="85" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="86" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="91" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="92" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="97" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="98" pinfunction="GND" pintype="power_in"/>
       <node ref="X1" pin="4" pinfunction="GND" pintype="unspecified"/>
     </net>
     <net code="33" name="Net-(D1-K)">
@@ -1482,377 +1503,379 @@
       <node ref="J5" pin="3" pinfunction="GND" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="VCC" pintype="passive"/>
     </net>
-    <net code="64" name="Net-(U1A-CM4_1.8V_Out-Pad88)">
-      <node ref="U1" pin="88" pinfunction="CM4_1.8V_Out" pintype="power_out"/>
-      <node ref="U1" pin="90" pinfunction="CM4_1.8V_Out" pintype="power_out"/>
+    <net code="64" name="Net-(U7-GPIO_VREF)">
+      <node ref="U7" pin="78" pinfunction="GPIO_VREF" pintype="power_in"/>
+      <node ref="U7" pin="84" pinfunction="CM4_3.3V_Out" pintype="power_out"/>
+      <node ref="U7" pin="86" pinfunction="CM4_3.3V_Out" pintype="power_out"/>
     </net>
-    <net code="65" name="Net-(U1A-GPIO_VREF)">
-      <node ref="U1" pin="78" pinfunction="GPIO_VREF" pintype="power_in"/>
-      <node ref="U1" pin="84" pinfunction="CM4_3.3V_Out" pintype="power_out"/>
-      <node ref="U1" pin="86" pinfunction="CM4_3.3V_Out" pintype="power_out"/>
-    </net>
-    <net code="66" name="unconnected-(D36V28FX1-EN-Pad2)">
+    <net code="65" name="unconnected-(D36V28FX1-EN-Pad2)">
       <node ref="D36V28FX1" pin="2" pinfunction="EN" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="67" name="unconnected-(D36V28FX1-PG-Pad1)">
+    <net code="66" name="unconnected-(D36V28FX1-PG-Pad1)">
       <node ref="D36V28FX1" pin="1" pinfunction="PG" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="68" name="unconnected-(D36V28FX2-EN-Pad2)">
+    <net code="67" name="unconnected-(D36V28FX2-EN-Pad2)">
       <node ref="D36V28FX2" pin="2" pinfunction="EN" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="69" name="unconnected-(D36V28FX2-PG-Pad1)">
+    <net code="68" name="unconnected-(D36V28FX2-PG-Pad1)">
       <node ref="D36V28FX2" pin="1" pinfunction="PG" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="70" name="unconnected-(ESCON1-D4-PadP14)">
+    <net code="69" name="unconnected-(ESCON1-D4-PadP14)">
       <node ref="ESCON1" pin="P14" pinfunction="D4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(ESCON2-D4-PadP14)">
+    <net code="70" name="unconnected-(ESCON2-D4-PadP14)">
       <node ref="ESCON2" pin="P14" pinfunction="D4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="72" name="unconnected-(ESCON3-D4-PadP14)">
+    <net code="71" name="unconnected-(ESCON3-D4-PadP14)">
       <node ref="ESCON3" pin="P14" pinfunction="D4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="73" name="unconnected-(ESCON4-D4-PadP14)">
+    <net code="72" name="unconnected-(ESCON4-D4-PadP14)">
       <node ref="ESCON4" pin="P14" pinfunction="D4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(J1-NC-Pad7)">
+    <net code="73" name="unconnected-(J1-NC-Pad7)">
       <node ref="J1" pin="7" pinfunction="NC" pintype="free+no_connect"/>
     </net>
-    <net code="75" name="unconnected-(J5-NC-Pad2)">
+    <net code="74" name="unconnected-(J5-NC-Pad2)">
       <node ref="J5" pin="2" pinfunction="NC" pintype="free"/>
     </net>
-    <net code="76" name="unconnected-(J6-NC-Pad2)">
+    <net code="75" name="unconnected-(J6-NC-Pad2)">
       <node ref="J6" pin="2" pinfunction="NC" pintype="free"/>
     </net>
-    <net code="77" name="unconnected-(U1A-AnalogIP0-Pad96)">
-      <node ref="U1" pin="96" pinfunction="AnalogIP0" pintype="passive"/>
+    <net code="76" name="unconnected-(U7-AnalogIP0-Pad96)">
+      <node ref="U7" pin="96" pinfunction="AnalogIP0" pintype="passive"/>
     </net>
-    <net code="78" name="unconnected-(U1A-AnalogIP1-Pad94)">
-      <node ref="U1" pin="94" pinfunction="AnalogIP1" pintype="passive"/>
+    <net code="77" name="unconnected-(U7-AnalogIP1-Pad94)">
+      <node ref="U7" pin="94" pinfunction="AnalogIP1" pintype="passive"/>
     </net>
-    <net code="79" name="unconnected-(U1A-Camera_GPIO-Pad97)">
-      <node ref="U1" pin="97" pinfunction="Camera_GPIO" pintype="passive"/>
+    <net code="78" name="unconnected-(U7-CM4_1.8V_Out-Pad88)">
+      <node ref="U7" pin="88" pinfunction="CM4_1.8V_Out" pintype="power_out"/>
     </net>
-    <net code="80" name="unconnected-(U1A-EEPROM_nWP-Pad20)">
-      <node ref="U1" pin="20" pinfunction="EEPROM_nWP" pintype="passive"/>
+    <net code="79" name="unconnected-(U7-CM4_1.8V_Out-Pad90)">
+      <node ref="U7" pin="90" pinfunction="CM4_1.8V_Out" pintype="power_out"/>
     </net>
-    <net code="81" name="unconnected-(U1A-Ethernet_Pair2_N-Pad9)">
-      <node ref="U1" pin="9" pinfunction="Ethernet_Pair2_N" pintype="passive"/>
+    <net code="80" name="unconnected-(U7-Camera_GPIO-Pad97)">
+      <node ref="U7" pin="97" pinfunction="Camera_GPIO" pintype="passive"/>
     </net>
-    <net code="82" name="unconnected-(U1A-Ethernet_Pair2_P-Pad11)">
-      <node ref="U1" pin="11" pinfunction="Ethernet_Pair2_P" pintype="passive"/>
+    <net code="81" name="unconnected-(U7-EEPROM_nWP-Pad20)">
+      <node ref="U7" pin="20" pinfunction="EEPROM_nWP" pintype="passive"/>
     </net>
-    <net code="83" name="unconnected-(U1A-Ethernet_Pair3_N-Pad5)">
-      <node ref="U1" pin="5" pinfunction="Ethernet_Pair3_N" pintype="passive"/>
+    <net code="82" name="unconnected-(U7-Ethernet_Pair2_N-Pad9)">
+      <node ref="U7" pin="9" pinfunction="Ethernet_Pair2_N" pintype="passive"/>
     </net>
-    <net code="84" name="unconnected-(U1A-Ethernet_Pair3_P-Pad3)">
-      <node ref="U1" pin="3" pinfunction="Ethernet_Pair3_P" pintype="passive"/>
+    <net code="83" name="unconnected-(U7-Ethernet_Pair2_P-Pad11)">
+      <node ref="U7" pin="11" pinfunction="Ethernet_Pair2_P" pintype="passive"/>
     </net>
-    <net code="85" name="unconnected-(U1A-Ethernet_SYNC_IN-Pad16)">
-      <node ref="U1" pin="16" pinfunction="Ethernet_SYNC_IN" pintype="input"/>
+    <net code="84" name="unconnected-(U7-Ethernet_Pair3_N-Pad5)">
+      <node ref="U7" pin="5" pinfunction="Ethernet_Pair3_N" pintype="passive"/>
     </net>
-    <net code="86" name="unconnected-(U1A-Ethernet_SYNC_OUT-Pad18)">
-      <node ref="U1" pin="18" pinfunction="Ethernet_SYNC_OUT" pintype="input"/>
+    <net code="85" name="unconnected-(U7-Ethernet_Pair3_P-Pad3)">
+      <node ref="U7" pin="3" pinfunction="Ethernet_Pair3_P" pintype="passive"/>
     </net>
-    <net code="87" name="unconnected-(U1A-GLOBAL_EN-Pad99)">
-      <node ref="U1" pin="99" pinfunction="GLOBAL_EN" pintype="input"/>
+    <net code="86" name="unconnected-(U7-Ethernet_SYNC_IN-Pad16)">
+      <node ref="U7" pin="16" pinfunction="Ethernet_SYNC_IN" pintype="input"/>
     </net>
-    <net code="88" name="unconnected-(U1A-GPIO17-Pad50)">
-      <node ref="U1" pin="50" pinfunction="GPIO17" pintype="passive"/>
+    <net code="87" name="unconnected-(U7-Ethernet_SYNC_OUT-Pad18)">
+      <node ref="U7" pin="18" pinfunction="Ethernet_SYNC_OUT" pintype="input"/>
     </net>
-    <net code="89" name="unconnected-(U1A-GPIO18-Pad49)">
-      <node ref="U1" pin="49" pinfunction="GPIO18" pintype="passive"/>
+    <net code="88" name="unconnected-(U7-GLOBAL_EN-Pad99)">
+      <node ref="U7" pin="99" pinfunction="GLOBAL_EN" pintype="input"/>
     </net>
-    <net code="90" name="unconnected-(U1A-GPIO22-Pad46)">
-      <node ref="U1" pin="46" pinfunction="GPIO22" pintype="passive"/>
+    <net code="89" name="unconnected-(U7-GPIO17-Pad50)">
+      <node ref="U7" pin="50" pinfunction="GPIO17" pintype="passive"/>
     </net>
-    <net code="91" name="unconnected-(U1A-GPIO23-Pad47)">
-      <node ref="U1" pin="47" pinfunction="GPIO23" pintype="passive"/>
+    <net code="90" name="unconnected-(U7-GPIO18-Pad49)">
+      <node ref="U7" pin="49" pinfunction="GPIO18" pintype="passive"/>
     </net>
-    <net code="92" name="unconnected-(U1A-GPIO24-Pad45)">
-      <node ref="U1" pin="45" pinfunction="GPIO24" pintype="passive"/>
+    <net code="91" name="unconnected-(U7-GPIO22-Pad46)">
+      <node ref="U7" pin="46" pinfunction="GPIO22" pintype="passive"/>
     </net>
-    <net code="93" name="unconnected-(U1A-GPIO25-Pad41)">
-      <node ref="U1" pin="41" pinfunction="GPIO25" pintype="passive"/>
+    <net code="92" name="unconnected-(U7-GPIO23-Pad47)">
+      <node ref="U7" pin="47" pinfunction="GPIO23" pintype="passive"/>
     </net>
-    <net code="94" name="unconnected-(U1A-GPIO27-Pad48)">
-      <node ref="U1" pin="48" pinfunction="GPIO27" pintype="passive"/>
+    <net code="93" name="unconnected-(U7-GPIO24-Pad45)">
+      <node ref="U7" pin="45" pinfunction="GPIO24" pintype="passive"/>
     </net>
-    <net code="95" name="unconnected-(U1A-I2C_SCL0-Pad80)">
-      <node ref="U1" pin="80" pinfunction="I2C_SCL0" pintype="bidirectional"/>
+    <net code="94" name="unconnected-(U7-GPIO25-Pad41)">
+      <node ref="U7" pin="41" pinfunction="GPIO25" pintype="passive"/>
     </net>
-    <net code="96" name="unconnected-(U1A-I2C_SDA0-Pad82)">
-      <node ref="U1" pin="82" pinfunction="I2C_SDA0" pintype="bidirectional"/>
+    <net code="95" name="unconnected-(U7-GPIO27-Pad48)">
+      <node ref="U7" pin="48" pinfunction="GPIO27" pintype="passive"/>
     </net>
-    <net code="97" name="unconnected-(U1A-ID_SC-Pad35)">
-      <node ref="U1" pin="35" pinfunction="ID_SC" pintype="passive"/>
+    <net code="96" name="unconnected-(U7-I2C_SCL0-Pad80)">
+      <node ref="U7" pin="80" pinfunction="I2C_SCL0" pintype="bidirectional"/>
     </net>
-    <net code="98" name="unconnected-(U1A-ID_SD-Pad36)">
-      <node ref="U1" pin="36" pinfunction="ID_SD" pintype="passive"/>
+    <net code="97" name="unconnected-(U7-I2C_SDA0-Pad82)">
+      <node ref="U7" pin="82" pinfunction="I2C_SDA0" pintype="bidirectional"/>
     </net>
-    <net code="99" name="unconnected-(U1A-RUN_PG-Pad92)">
-      <node ref="U1" pin="92" pinfunction="RUN_PG" pintype="passive"/>
+    <net code="98" name="unconnected-(U7-ID_SC-Pad35)">
+      <node ref="U7" pin="35" pinfunction="ID_SC" pintype="passive"/>
     </net>
-    <net code="100" name="unconnected-(U1A-Reserved-Pad76)">
-      <node ref="U1" pin="76" pinfunction="Reserved" pintype="no_connect"/>
+    <net code="99" name="unconnected-(U7-ID_SD-Pad36)">
+      <node ref="U7" pin="36" pinfunction="ID_SD" pintype="passive"/>
     </net>
-    <net code="101" name="unconnected-(U1A-SD_CLK-Pad57)">
-      <node ref="U1" pin="57" pinfunction="SD_CLK" pintype="passive"/>
+    <net code="100" name="unconnected-(U7-RUN_PG-Pad92)">
+      <node ref="U7" pin="92" pinfunction="RUN_PG" pintype="passive"/>
     </net>
-    <net code="102" name="unconnected-(U1A-SD_CMD-Pad62)">
-      <node ref="U1" pin="62" pinfunction="SD_CMD" pintype="passive"/>
+    <net code="101" name="unconnected-(U7-Reserved-Pad76)">
+      <node ref="U7" pin="76" pinfunction="Reserved" pintype="no_connect"/>
     </net>
-    <net code="103" name="unconnected-(U1A-SD_DAT0-Pad63)">
-      <node ref="U1" pin="63" pinfunction="SD_DAT0" pintype="passive"/>
+    <net code="102" name="unconnected-(U7-SD_CLK-Pad57)">
+      <node ref="U7" pin="57" pinfunction="SD_CLK" pintype="passive"/>
     </net>
-    <net code="104" name="unconnected-(U1A-SD_DAT1-Pad67)">
-      <node ref="U1" pin="67" pinfunction="SD_DAT1" pintype="passive"/>
+    <net code="103" name="unconnected-(U7-SD_CMD-Pad62)">
+      <node ref="U7" pin="62" pinfunction="SD_CMD" pintype="passive"/>
     </net>
-    <net code="105" name="unconnected-(U1A-SD_DAT2-Pad69)">
-      <node ref="U1" pin="69" pinfunction="SD_DAT2" pintype="passive"/>
+    <net code="104" name="unconnected-(U7-SD_DAT0-Pad63)">
+      <node ref="U7" pin="63" pinfunction="SD_DAT0" pintype="passive"/>
     </net>
-    <net code="106" name="unconnected-(U1A-SD_DAT3-Pad61)">
-      <node ref="U1" pin="61" pinfunction="SD_DAT3" pintype="passive"/>
+    <net code="105" name="unconnected-(U7-SD_DAT1-Pad67)">
+      <node ref="U7" pin="67" pinfunction="SD_DAT1" pintype="passive"/>
     </net>
-    <net code="107" name="unconnected-(U1A-SD_DAT4-Pad68)">
-      <node ref="U1" pin="68" pinfunction="SD_DAT4" pintype="passive"/>
+    <net code="106" name="unconnected-(U7-SD_DAT2-Pad69)">
+      <node ref="U7" pin="69" pinfunction="SD_DAT2" pintype="passive"/>
     </net>
-    <net code="108" name="unconnected-(U1A-SD_DAT5-Pad64)">
-      <node ref="U1" pin="64" pinfunction="SD_DAT5" pintype="passive"/>
+    <net code="107" name="unconnected-(U7-SD_DAT3-Pad61)">
+      <node ref="U7" pin="61" pinfunction="SD_DAT3" pintype="passive"/>
     </net>
-    <net code="109" name="unconnected-(U1A-SD_DAT6-Pad72)">
-      <node ref="U1" pin="72" pinfunction="SD_DAT6" pintype="passive"/>
+    <net code="108" name="unconnected-(U7-SD_DAT4-Pad68)">
+      <node ref="U7" pin="68" pinfunction="SD_DAT4" pintype="passive"/>
     </net>
-    <net code="110" name="unconnected-(U1A-SD_DAT7-Pad70)">
-      <node ref="U1" pin="70" pinfunction="SD_DAT7" pintype="passive"/>
+    <net code="109" name="unconnected-(U7-SD_DAT5-Pad64)">
+      <node ref="U7" pin="64" pinfunction="SD_DAT5" pintype="passive"/>
     </net>
-    <net code="111" name="unconnected-(U1A-SD_PWR_ON-Pad75)">
-      <node ref="U1" pin="75" pinfunction="SD_PWR_ON" pintype="output"/>
+    <net code="110" name="unconnected-(U7-SD_DAT6-Pad72)">
+      <node ref="U7" pin="72" pinfunction="SD_DAT6" pintype="passive"/>
     </net>
-    <net code="112" name="unconnected-(U1A-SD_VDD_Override-Pad73)">
-      <node ref="U1" pin="73" pinfunction="SD_VDD_Override" pintype="input"/>
+    <net code="111" name="unconnected-(U7-SD_DAT7-Pad70)">
+      <node ref="U7" pin="70" pinfunction="SD_DAT7" pintype="passive"/>
     </net>
-    <net code="113" name="unconnected-(U1A-~{BT_nDisable}-Pad91)">
-      <node ref="U1" pin="91" pinfunction="~{BT_nDisable}" pintype="input"/>
+    <net code="112" name="unconnected-(U7-SD_PWR_ON-Pad75)">
+      <node ref="U7" pin="75" pinfunction="SD_PWR_ON" pintype="output"/>
     </net>
-    <net code="114" name="unconnected-(U1A-~{Ethernet_nLED1}-Pad19)">
-      <node ref="U1" pin="19" pinfunction="~{Ethernet_nLED1}" pintype="output"/>
+    <net code="113" name="unconnected-(U7-SD_VDD_Override-Pad73)">
+      <node ref="U7" pin="73" pinfunction="SD_VDD_Override" pintype="input"/>
     </net>
-    <net code="115" name="unconnected-(U1A-~{Ethernet_nLED2}-Pad17)">
-      <node ref="U1" pin="17" pinfunction="~{Ethernet_nLED2}" pintype="output"/>
+    <net code="114" name="unconnected-(U7-~{BT_nDisable}-Pad91)">
+      <node ref="U7" pin="91" pinfunction="~{BT_nDisable}" pintype="input"/>
     </net>
-    <net code="116" name="unconnected-(U1A-~{Ethernet_nLED3}-Pad15)">
-      <node ref="U1" pin="15" pinfunction="~{Ethernet_nLED3}" pintype="output"/>
+    <net code="115" name="unconnected-(U7-~{Ethernet_nLED1}-Pad19)">
+      <node ref="U7" pin="19" pinfunction="~{Ethernet_nLED1}" pintype="output"/>
     </net>
-    <net code="117" name="unconnected-(U1A-~{PI_LED_nPWR}-Pad95)">
-      <node ref="U1" pin="95" pinfunction="~{PI_LED_nPWR}" pintype="output"/>
+    <net code="116" name="unconnected-(U7-~{Ethernet_nLED2}-Pad17)">
+      <node ref="U7" pin="17" pinfunction="~{Ethernet_nLED2}" pintype="output"/>
     </net>
-    <net code="118" name="unconnected-(U1A-~{WL_nDisable}-Pad89)">
-      <node ref="U1" pin="89" pinfunction="~{WL_nDisable}" pintype="input"/>
+    <net code="117" name="unconnected-(U7-~{Ethernet_nLED3}-Pad15)">
+      <node ref="U7" pin="15" pinfunction="~{Ethernet_nLED3}" pintype="output"/>
     </net>
-    <net code="119" name="unconnected-(U1A-~{nEXTRST}-Pad100)">
-      <node ref="U1" pin="100" pinfunction="~{nEXTRST}" pintype="output"/>
+    <net code="118" name="unconnected-(U7-~{PI_LED_nPWR}-Pad95)">
+      <node ref="U7" pin="95" pinfunction="~{PI_LED_nPWR}" pintype="output"/>
     </net>
-    <net code="120" name="unconnected-(U1B-CAM0_C_N-Pad140)">
-      <node ref="U1" pin="140" pinfunction="CAM0_C_N" pintype="input"/>
+    <net code="119" name="unconnected-(U7-~{WL_nDisable}-Pad89)">
+      <node ref="U7" pin="89" pinfunction="~{WL_nDisable}" pintype="input"/>
     </net>
-    <net code="121" name="unconnected-(U1B-CAM0_C_P-Pad142)">
-      <node ref="U1" pin="142" pinfunction="CAM0_C_P" pintype="input"/>
+    <net code="120" name="unconnected-(U7-~{nEXTRST}-Pad100)">
+      <node ref="U7" pin="100" pinfunction="~{nEXTRST}" pintype="output"/>
     </net>
-    <net code="122" name="unconnected-(U1B-CAM0_D0_N-Pad128)">
-      <node ref="U1" pin="128" pinfunction="CAM0_D0_N" pintype="input"/>
+    <net code="121" name="unconnected-(U8-CAM0_C_N-Pad40)">
+      <node ref="U8" pin="40" pinfunction="CAM0_C_N" pintype="input"/>
     </net>
-    <net code="123" name="unconnected-(U1B-CAM0_D0_P-Pad130)">
-      <node ref="U1" pin="130" pinfunction="CAM0_D0_P" pintype="input"/>
+    <net code="122" name="unconnected-(U8-CAM0_C_P-Pad42)">
+      <node ref="U8" pin="42" pinfunction="CAM0_C_P" pintype="input"/>
     </net>
-    <net code="124" name="unconnected-(U1B-CAM0_D1_N-Pad134)">
-      <node ref="U1" pin="134" pinfunction="CAM0_D1_N" pintype="input"/>
+    <net code="123" name="unconnected-(U8-CAM0_D0_N-Pad28)">
+      <node ref="U8" pin="28" pinfunction="CAM0_D0_N" pintype="input"/>
     </net>
-    <net code="125" name="unconnected-(U1B-CAM0_D1_P-Pad136)">
-      <node ref="U1" pin="136" pinfunction="CAM0_D1_P" pintype="input"/>
+    <net code="124" name="unconnected-(U8-CAM0_D0_P-Pad30)">
+      <node ref="U8" pin="30" pinfunction="CAM0_D0_P" pintype="input"/>
     </net>
-    <net code="126" name="unconnected-(U1B-CAM1_C_N-Pad127)">
-      <node ref="U1" pin="127" pinfunction="CAM1_C_N" pintype="input"/>
+    <net code="125" name="unconnected-(U8-CAM0_D1_N-Pad34)">
+      <node ref="U8" pin="34" pinfunction="CAM0_D1_N" pintype="input"/>
     </net>
-    <net code="127" name="unconnected-(U1B-CAM1_C_P-Pad129)">
-      <node ref="U1" pin="129" pinfunction="CAM1_C_P" pintype="input"/>
+    <net code="126" name="unconnected-(U8-CAM0_D1_P-Pad36)">
+      <node ref="U8" pin="36" pinfunction="CAM0_D1_P" pintype="input"/>
     </net>
-    <net code="128" name="unconnected-(U1B-CAM1_D0_N-Pad115)">
-      <node ref="U1" pin="115" pinfunction="CAM1_D0_N" pintype="input"/>
+    <net code="127" name="unconnected-(U8-CAM1_C_N-Pad27)">
+      <node ref="U8" pin="27" pinfunction="CAM1_C_N" pintype="input"/>
     </net>
-    <net code="129" name="unconnected-(U1B-CAM1_D0_P-Pad117)">
-      <node ref="U1" pin="117" pinfunction="CAM1_D0_P" pintype="input"/>
+    <net code="128" name="unconnected-(U8-CAM1_C_P-Pad29)">
+      <node ref="U8" pin="29" pinfunction="CAM1_C_P" pintype="input"/>
     </net>
-    <net code="130" name="unconnected-(U1B-CAM1_D1_N-Pad121)">
-      <node ref="U1" pin="121" pinfunction="CAM1_D1_N" pintype="input"/>
+    <net code="129" name="unconnected-(U8-CAM1_D0_N-Pad15)">
+      <node ref="U8" pin="15" pinfunction="CAM1_D0_N" pintype="input"/>
     </net>
-    <net code="131" name="unconnected-(U1B-CAM1_D1_P-Pad123)">
-      <node ref="U1" pin="123" pinfunction="CAM1_D1_P" pintype="input"/>
+    <net code="130" name="unconnected-(U8-CAM1_D0_P-Pad17)">
+      <node ref="U8" pin="17" pinfunction="CAM1_D0_P" pintype="input"/>
     </net>
-    <net code="132" name="unconnected-(U1B-CAM1_D2_N-Pad133)">
-      <node ref="U1" pin="133" pinfunction="CAM1_D2_N" pintype="input"/>
+    <net code="131" name="unconnected-(U8-CAM1_D1_N-Pad21)">
+      <node ref="U8" pin="21" pinfunction="CAM1_D1_N" pintype="input"/>
     </net>
-    <net code="133" name="unconnected-(U1B-CAM1_D2_P-Pad135)">
-      <node ref="U1" pin="135" pinfunction="CAM1_D2_P" pintype="input"/>
+    <net code="132" name="unconnected-(U8-CAM1_D1_P-Pad23)">
+      <node ref="U8" pin="23" pinfunction="CAM1_D1_P" pintype="input"/>
     </net>
-    <net code="134" name="unconnected-(U1B-CAM1_D3_N-Pad139)">
-      <node ref="U1" pin="139" pinfunction="CAM1_D3_N" pintype="input"/>
+    <net code="133" name="unconnected-(U8-CAM1_D2_N-Pad33)">
+      <node ref="U8" pin="33" pinfunction="CAM1_D2_N" pintype="input"/>
     </net>
-    <net code="135" name="unconnected-(U1B-CAM1_D3_P-Pad141)">
-      <node ref="U1" pin="141" pinfunction="CAM1_D3_P" pintype="input"/>
+    <net code="134" name="unconnected-(U8-CAM1_D2_P-Pad35)">
+      <node ref="U8" pin="35" pinfunction="CAM1_D2_P" pintype="input"/>
     </net>
-    <net code="136" name="unconnected-(U1B-DSI0_C_N-Pad169)">
-      <node ref="U1" pin="169" pinfunction="DSI0_C_N" pintype="output"/>
+    <net code="135" name="unconnected-(U8-CAM1_D3_N-Pad39)">
+      <node ref="U8" pin="39" pinfunction="CAM1_D3_N" pintype="input"/>
     </net>
-    <net code="137" name="unconnected-(U1B-DSI0_C_P-Pad171)">
-      <node ref="U1" pin="171" pinfunction="DSI0_C_P" pintype="output"/>
+    <net code="136" name="unconnected-(U8-CAM1_D3_P-Pad41)">
+      <node ref="U8" pin="41" pinfunction="CAM1_D3_P" pintype="input"/>
     </net>
-    <net code="138" name="unconnected-(U1B-DSI0_D0_N-Pad157)">
-      <node ref="U1" pin="157" pinfunction="DSI0_D0_N" pintype="output"/>
+    <net code="137" name="unconnected-(U8-DSI0_C_N-Pad69)">
+      <node ref="U8" pin="69" pinfunction="DSI0_C_N" pintype="output"/>
     </net>
-    <net code="139" name="unconnected-(U1B-DSI0_D0_P-Pad159)">
-      <node ref="U1" pin="159" pinfunction="DSI0_D0_P" pintype="output"/>
+    <net code="138" name="unconnected-(U8-DSI0_C_P-Pad71)">
+      <node ref="U8" pin="71" pinfunction="DSI0_C_P" pintype="output"/>
     </net>
-    <net code="140" name="unconnected-(U1B-DSI0_D1_N-Pad163)">
-      <node ref="U1" pin="163" pinfunction="DSI0_D1_N" pintype="output"/>
+    <net code="139" name="unconnected-(U8-DSI0_D0_N-Pad57)">
+      <node ref="U8" pin="57" pinfunction="DSI0_D0_N" pintype="output"/>
     </net>
-    <net code="141" name="unconnected-(U1B-DSI0_D1_P-Pad165)">
-      <node ref="U1" pin="165" pinfunction="DSI0_D1_P" pintype="output"/>
+    <net code="140" name="unconnected-(U8-DSI0_D0_P-Pad59)">
+      <node ref="U8" pin="59" pinfunction="DSI0_D0_P" pintype="output"/>
     </net>
-    <net code="142" name="unconnected-(U1B-DSI1_C_N-Pad187)">
-      <node ref="U1" pin="187" pinfunction="DSI1_C_N" pintype="output"/>
+    <net code="141" name="unconnected-(U8-DSI0_D1_N-Pad63)">
+      <node ref="U8" pin="63" pinfunction="DSI0_D1_N" pintype="output"/>
     </net>
-    <net code="143" name="unconnected-(U1B-DSI1_C_P-Pad189)">
-      <node ref="U1" pin="189" pinfunction="DSI1_C_P" pintype="output"/>
+    <net code="142" name="unconnected-(U8-DSI0_D1_P-Pad65)">
+      <node ref="U8" pin="65" pinfunction="DSI0_D1_P" pintype="output"/>
     </net>
-    <net code="144" name="unconnected-(U1B-DSI1_D0_N-Pad175)">
-      <node ref="U1" pin="175" pinfunction="DSI1_D0_N" pintype="output"/>
+    <net code="143" name="unconnected-(U8-DSI1_C_N-Pad87)">
+      <node ref="U8" pin="87" pinfunction="DSI1_C_N" pintype="output"/>
     </net>
-    <net code="145" name="unconnected-(U1B-DSI1_D0_P-Pad177)">
-      <node ref="U1" pin="177" pinfunction="DSI1_D0_P" pintype="output"/>
+    <net code="144" name="unconnected-(U8-DSI1_C_P-Pad89)">
+      <node ref="U8" pin="89" pinfunction="DSI1_C_P" pintype="output"/>
     </net>
-    <net code="146" name="unconnected-(U1B-DSI1_D1_N-Pad181)">
-      <node ref="U1" pin="181" pinfunction="DSI1_D1_N" pintype="output"/>
+    <net code="145" name="unconnected-(U8-DSI1_D0_N-Pad75)">
+      <node ref="U8" pin="75" pinfunction="DSI1_D0_N" pintype="output"/>
     </net>
-    <net code="147" name="unconnected-(U1B-DSI1_D1_P-Pad183)">
-      <node ref="U1" pin="183" pinfunction="DSI1_D1_P" pintype="output"/>
+    <net code="146" name="unconnected-(U8-DSI1_D0_P-Pad77)">
+      <node ref="U8" pin="77" pinfunction="DSI1_D0_P" pintype="output"/>
     </net>
-    <net code="148" name="unconnected-(U1B-DSI1_D2_N-Pad193)">
-      <node ref="U1" pin="193" pinfunction="DSI1_D2_N" pintype="output"/>
+    <net code="147" name="unconnected-(U8-DSI1_D1_N-Pad81)">
+      <node ref="U8" pin="81" pinfunction="DSI1_D1_N" pintype="output"/>
     </net>
-    <net code="149" name="unconnected-(U1B-DSI1_D2_P-Pad195)">
-      <node ref="U1" pin="195" pinfunction="DSI1_D2_P" pintype="output"/>
+    <net code="148" name="unconnected-(U8-DSI1_D1_P-Pad83)">
+      <node ref="U8" pin="83" pinfunction="DSI1_D1_P" pintype="output"/>
     </net>
-    <net code="150" name="unconnected-(U1B-DSI1_D3_N-Pad194)">
-      <node ref="U1" pin="194" pinfunction="DSI1_D3_N" pintype="output"/>
+    <net code="149" name="unconnected-(U8-DSI1_D2_N-Pad93)">
+      <node ref="U8" pin="93" pinfunction="DSI1_D2_N" pintype="output"/>
     </net>
-    <net code="151" name="unconnected-(U1B-DSI1_D3_P-Pad196)">
-      <node ref="U1" pin="196" pinfunction="DSI1_D3_P" pintype="output"/>
+    <net code="150" name="unconnected-(U8-DSI1_D2_P-Pad95)">
+      <node ref="U8" pin="95" pinfunction="DSI1_D2_P" pintype="output"/>
     </net>
-    <net code="152" name="unconnected-(U1B-HDMI0_CEC-Pad151)">
-      <node ref="U1" pin="151" pinfunction="HDMI0_CEC" pintype="open_collector"/>
+    <net code="151" name="unconnected-(U8-DSI1_D3_N-Pad94)">
+      <node ref="U8" pin="94" pinfunction="DSI1_D3_N" pintype="output"/>
     </net>
-    <net code="153" name="unconnected-(U1B-HDMI0_CLK_N-Pad190)">
-      <node ref="U1" pin="190" pinfunction="HDMI0_CLK_N" pintype="output"/>
+    <net code="152" name="unconnected-(U8-DSI1_D3_P-Pad96)">
+      <node ref="U8" pin="96" pinfunction="DSI1_D3_P" pintype="output"/>
     </net>
-    <net code="154" name="unconnected-(U1B-HDMI0_CLK_P-Pad188)">
-      <node ref="U1" pin="188" pinfunction="HDMI0_CLK_P" pintype="output"/>
+    <net code="153" name="unconnected-(U8-HDMI0_CEC-Pad51)">
+      <node ref="U8" pin="51" pinfunction="HDMI0_CEC" pintype="open_collector"/>
     </net>
-    <net code="155" name="unconnected-(U1B-HDMI0_HOTPLUG-Pad153)">
-      <node ref="U1" pin="153" pinfunction="HDMI0_HOTPLUG" pintype="input"/>
+    <net code="154" name="unconnected-(U8-HDMI0_CLK_N-Pad90)">
+      <node ref="U8" pin="90" pinfunction="HDMI0_CLK_N" pintype="output"/>
     </net>
-    <net code="156" name="unconnected-(U1B-HDMI0_SCL-Pad200)">
-      <node ref="U1" pin="200" pinfunction="HDMI0_SCL" pintype="open_collector"/>
+    <net code="155" name="unconnected-(U8-HDMI0_CLK_P-Pad88)">
+      <node ref="U8" pin="88" pinfunction="HDMI0_CLK_P" pintype="output"/>
     </net>
-    <net code="157" name="unconnected-(U1B-HDMI0_SDA-Pad199)">
-      <node ref="U1" pin="199" pinfunction="HDMI0_SDA" pintype="bidirectional"/>
+    <net code="156" name="unconnected-(U8-HDMI0_HOTPLUG-Pad53)">
+      <node ref="U8" pin="53" pinfunction="HDMI0_HOTPLUG" pintype="input"/>
     </net>
-    <net code="158" name="unconnected-(U1B-HDMI0_TX0_N-Pad184)">
-      <node ref="U1" pin="184" pinfunction="HDMI0_TX0_N" pintype="output"/>
+    <net code="157" name="unconnected-(U8-HDMI0_SCL-Pad100)">
+      <node ref="U8" pin="100" pinfunction="HDMI0_SCL" pintype="open_collector"/>
     </net>
-    <net code="159" name="unconnected-(U1B-HDMI0_TX0_P-Pad182)">
-      <node ref="U1" pin="182" pinfunction="HDMI0_TX0_P" pintype="output"/>
+    <net code="158" name="unconnected-(U8-HDMI0_SDA-Pad99)">
+      <node ref="U8" pin="99" pinfunction="HDMI0_SDA" pintype="bidirectional"/>
     </net>
-    <net code="160" name="unconnected-(U1B-HDMI0_TX1_N-Pad178)">
-      <node ref="U1" pin="178" pinfunction="HDMI0_TX1_N" pintype="output"/>
+    <net code="159" name="unconnected-(U8-HDMI0_TX0_N-Pad84)">
+      <node ref="U8" pin="84" pinfunction="HDMI0_TX0_N" pintype="output"/>
     </net>
-    <net code="161" name="unconnected-(U1B-HDMI0_TX1_P-Pad176)">
-      <node ref="U1" pin="176" pinfunction="HDMI0_TX1_P" pintype="output"/>
+    <net code="160" name="unconnected-(U8-HDMI0_TX0_P-Pad82)">
+      <node ref="U8" pin="82" pinfunction="HDMI0_TX0_P" pintype="output"/>
     </net>
-    <net code="162" name="unconnected-(U1B-HDMI0_TX2_N-Pad172)">
-      <node ref="U1" pin="172" pinfunction="HDMI0_TX2_N" pintype="output"/>
+    <net code="161" name="unconnected-(U8-HDMI0_TX1_N-Pad78)">
+      <node ref="U8" pin="78" pinfunction="HDMI0_TX1_N" pintype="output"/>
     </net>
-    <net code="163" name="unconnected-(U1B-HDMI0_TX2_P-Pad170)">
-      <node ref="U1" pin="170" pinfunction="HDMI0_TX2_P" pintype="output"/>
+    <net code="162" name="unconnected-(U8-HDMI0_TX1_P-Pad76)">
+      <node ref="U8" pin="76" pinfunction="HDMI0_TX1_P" pintype="output"/>
     </net>
-    <net code="164" name="unconnected-(U1B-HDMI1_CEC-Pad149)">
-      <node ref="U1" pin="149" pinfunction="HDMI1_CEC" pintype="open_collector"/>
+    <net code="163" name="unconnected-(U8-HDMI0_TX2_N-Pad72)">
+      <node ref="U8" pin="72" pinfunction="HDMI0_TX2_N" pintype="output"/>
     </net>
-    <net code="165" name="unconnected-(U1B-HDMI1_CLK_N-Pad166)">
-      <node ref="U1" pin="166" pinfunction="HDMI1_CLK_N" pintype="output"/>
+    <net code="164" name="unconnected-(U8-HDMI0_TX2_P-Pad70)">
+      <node ref="U8" pin="70" pinfunction="HDMI0_TX2_P" pintype="output"/>
     </net>
-    <net code="166" name="unconnected-(U1B-HDMI1_CLK_P-Pad164)">
-      <node ref="U1" pin="164" pinfunction="HDMI1_CLK_P" pintype="output"/>
+    <net code="165" name="unconnected-(U8-HDMI1_CEC-Pad49)">
+      <node ref="U8" pin="49" pinfunction="HDMI1_CEC" pintype="open_collector"/>
     </net>
-    <net code="167" name="unconnected-(U1B-HDMI1_HOTPLUG-Pad143)">
-      <node ref="U1" pin="143" pinfunction="HDMI1_HOTPLUG" pintype="input"/>
+    <net code="166" name="unconnected-(U8-HDMI1_CLK_N-Pad66)">
+      <node ref="U8" pin="66" pinfunction="HDMI1_CLK_N" pintype="output"/>
     </net>
-    <net code="168" name="unconnected-(U1B-HDMI1_SCL-Pad147)">
-      <node ref="U1" pin="147" pinfunction="HDMI1_SCL" pintype="open_collector"/>
+    <net code="167" name="unconnected-(U8-HDMI1_CLK_P-Pad64)">
+      <node ref="U8" pin="64" pinfunction="HDMI1_CLK_P" pintype="output"/>
     </net>
-    <net code="169" name="unconnected-(U1B-HDMI1_SDA-Pad145)">
-      <node ref="U1" pin="145" pinfunction="HDMI1_SDA" pintype="bidirectional"/>
+    <net code="168" name="unconnected-(U8-HDMI1_HOTPLUG-Pad43)">
+      <node ref="U8" pin="43" pinfunction="HDMI1_HOTPLUG" pintype="input"/>
     </net>
-    <net code="170" name="unconnected-(U1B-HDMI1_TX0_N-Pad160)">
-      <node ref="U1" pin="160" pinfunction="HDMI1_TX0_N" pintype="output"/>
+    <net code="169" name="unconnected-(U8-HDMI1_SCL-Pad47)">
+      <node ref="U8" pin="47" pinfunction="HDMI1_SCL" pintype="open_collector"/>
     </net>
-    <net code="171" name="unconnected-(U1B-HDMI1_TX0_P-Pad158)">
-      <node ref="U1" pin="158" pinfunction="HDMI1_TX0_P" pintype="output"/>
+    <net code="170" name="unconnected-(U8-HDMI1_SDA-Pad45)">
+      <node ref="U8" pin="45" pinfunction="HDMI1_SDA" pintype="bidirectional"/>
     </net>
-    <net code="172" name="unconnected-(U1B-HDMI1_TX1_N-Pad154)">
-      <node ref="U1" pin="154" pinfunction="HDMI1_TX1_N" pintype="output"/>
+    <net code="171" name="unconnected-(U8-HDMI1_TX0_N-Pad60)">
+      <node ref="U8" pin="60" pinfunction="HDMI1_TX0_N" pintype="output"/>
     </net>
-    <net code="173" name="unconnected-(U1B-HDMI1_TX1_P-Pad152)">
-      <node ref="U1" pin="152" pinfunction="HDMI1_TX1_P" pintype="output"/>
+    <net code="172" name="unconnected-(U8-HDMI1_TX0_P-Pad58)">
+      <node ref="U8" pin="58" pinfunction="HDMI1_TX0_P" pintype="output"/>
     </net>
-    <net code="174" name="unconnected-(U1B-HDMI1_TX2_N-Pad148)">
-      <node ref="U1" pin="148" pinfunction="HDMI1_TX2_N" pintype="output"/>
+    <net code="173" name="unconnected-(U8-HDMI1_TX1_N-Pad54)">
+      <node ref="U8" pin="54" pinfunction="HDMI1_TX1_N" pintype="output"/>
     </net>
-    <net code="175" name="unconnected-(U1B-HDMI1_TX2_P-Pad146)">
-      <node ref="U1" pin="146" pinfunction="HDMI1_TX2_P" pintype="output"/>
+    <net code="174" name="unconnected-(U8-HDMI1_TX1_P-Pad52)">
+      <node ref="U8" pin="52" pinfunction="HDMI1_TX1_P" pintype="output"/>
     </net>
-    <net code="176" name="unconnected-(U1B-PCIe_CLK_N-Pad112)">
-      <node ref="U1" pin="112" pinfunction="PCIe_CLK_N" pintype="output"/>
+    <net code="175" name="unconnected-(U8-HDMI1_TX2_N-Pad48)">
+      <node ref="U8" pin="48" pinfunction="HDMI1_TX2_N" pintype="output"/>
     </net>
-    <net code="177" name="unconnected-(U1B-PCIe_CLK_P-Pad110)">
-      <node ref="U1" pin="110" pinfunction="PCIe_CLK_P" pintype="output"/>
+    <net code="176" name="unconnected-(U8-HDMI1_TX2_P-Pad46)">
+      <node ref="U8" pin="46" pinfunction="HDMI1_TX2_P" pintype="output"/>
     </net>
-    <net code="178" name="unconnected-(U1B-PCIe_RX_N-Pad118)">
-      <node ref="U1" pin="118" pinfunction="PCIe_RX_N" pintype="input"/>
+    <net code="177" name="unconnected-(U8-PCIe_CLK_N-Pad12)">
+      <node ref="U8" pin="12" pinfunction="PCIe_CLK_N" pintype="output"/>
     </net>
-    <net code="179" name="unconnected-(U1B-PCIe_RX_P-Pad116)">
-      <node ref="U1" pin="116" pinfunction="PCIe_RX_P" pintype="input"/>
+    <net code="178" name="unconnected-(U8-PCIe_CLK_P-Pad10)">
+      <node ref="U8" pin="10" pinfunction="PCIe_CLK_P" pintype="output"/>
     </net>
-    <net code="180" name="unconnected-(U1B-PCIe_TX_N-Pad124)">
-      <node ref="U1" pin="124" pinfunction="PCIe_TX_N" pintype="output"/>
+    <net code="179" name="unconnected-(U8-PCIe_RX_N-Pad18)">
+      <node ref="U8" pin="18" pinfunction="PCIe_RX_N" pintype="input"/>
     </net>
-    <net code="181" name="unconnected-(U1B-PCIe_TX_P-Pad122)">
-      <node ref="U1" pin="122" pinfunction="PCIe_TX_P" pintype="output"/>
+    <net code="180" name="unconnected-(U8-PCIe_RX_P-Pad16)">
+      <node ref="U8" pin="16" pinfunction="PCIe_RX_P" pintype="input"/>
     </net>
-    <net code="182" name="unconnected-(U1B-Reserved-Pad104)">
-      <node ref="U1" pin="104" pinfunction="Reserved" pintype="no_connect"/>
+    <net code="181" name="unconnected-(U8-PCIe_TX_N-Pad24)">
+      <node ref="U8" pin="24" pinfunction="PCIe_TX_N" pintype="output"/>
     </net>
-    <net code="183" name="unconnected-(U1B-Reserved-Pad106)">
-      <node ref="U1" pin="106" pinfunction="Reserved" pintype="no_connect"/>
+    <net code="182" name="unconnected-(U8-PCIe_TX_P-Pad22)">
+      <node ref="U8" pin="22" pinfunction="PCIe_TX_P" pintype="output"/>
     </net>
-    <net code="184" name="unconnected-(U1B-VDAC_COMP-Pad111)">
-      <node ref="U1" pin="111" pinfunction="VDAC_COMP" pintype="output"/>
+    <net code="183" name="unconnected-(U8-Reserved-Pad4)">
+      <node ref="U8" pin="4" pinfunction="Reserved" pintype="no_connect"/>
     </net>
-    <net code="185" name="unconnected-(U1B-~{PCIe_CLK_nREQ}-Pad102)">
-      <node ref="U1" pin="102" pinfunction="~{PCIe_CLK_nREQ}" pintype="input"/>
+    <net code="184" name="unconnected-(U8-Reserved-Pad6)">
+      <node ref="U8" pin="6" pinfunction="Reserved" pintype="no_connect"/>
     </net>
-    <net code="186" name="unconnected-(U1B-~{PCIe_nRST}-Pad109)">
-      <node ref="U1" pin="109" pinfunction="~{PCIe_nRST}" pintype="output"/>
+    <net code="185" name="unconnected-(U8-VDAC_COMP-Pad11)">
+      <node ref="U8" pin="11" pinfunction="VDAC_COMP" pintype="output"/>
+    </net>
+    <net code="186" name="unconnected-(U8-~{PCIe_CLK_nREQ}-Pad2)">
+      <node ref="U8" pin="2" pinfunction="~{PCIe_CLK_nREQ}" pintype="input"/>
+    </net>
+    <net code="187" name="unconnected-(U8-~{PCIe_nRST}-Pad9)">
+      <node ref="U8" pin="9" pinfunction="~{PCIe_nRST}" pintype="output"/>
     </net>
   </nets>
 </export>
